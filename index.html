@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <div class="settings">
+            <label for="length">Password Length:</label>
+            <input type="number" id="length" value="12" min="1">
+        </div>
+        <div class="settings">
+            <label><input type="checkbox" id="uppercase" checked> Include Uppercase</label>
+        </div>
+        <div class="settings">
+            <label><input type="checkbox" id="lowercase" checked> Include Lowercase</label>
+        </div>
+        <div class="settings">
+            <label><input type="checkbox" id="numbers" checked> Include Numbers</label>
+        </div>
+        <div class="settings">
+            <label><input type="checkbox" id="special" checked> Include Special Characters</label>
+        </div>
+        <button onclick="generatePassword()">Generate Password</button>
+        <div class="result">
+            <p id="password"></p>
+        </div>
+        <button onclick="copyToClipboard()">Copy to Clipboard</button>
+        <div class="flows">
+            <h2>OAuth 2.0 and OpenID Connect Flows</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Flow Type</th>
+                        <th>Description</th>
+                        <th>Real-World Scenario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Authorization Code</td>
+                        <td>Used by web applications to securely obtain access tokens.</td>
+                        <td>Web apps accessing APIs on behalf of users.</td>
+                    </tr>
+                    <tr>
+                        <td>Implicit</td>
+                        <td>Used by single-page applications to obtain tokens directly in the browser.</td>
+                        <td>Single-page apps requiring immediate access tokens.</td>
+                    </tr>
+                    <tr>
+                        <td>Resource Owner Password Credentials</td>
+                        <td>Used by trusted applications to directly obtain tokens using user credentials.</td>
+                        <td>First-party applications needing direct user authentication.</td>
+                    </tr>
+                    <tr>
+                        <td>Client Credentials</td>
+                        <td>Used by applications to access resources on their own behalf.</td>
+                        <td>Server-to-server communication without user involvement.</td>
+                    </tr>
+                    <tr>
+                        <td>Device Code</td>
+                        <td>Used by devices with limited input capabilities to obtain tokens.</td>
+                        <td>Smart home devices or IoT applications.</td>
+                    </tr>
+                    <tr>
+                        <td>Refresh Token</td>
+                        <td>Used to obtain new access tokens without requiring user interaction.</td>
+                        <td>Long-lived sessions requiring periodic token renewal.</td>
+                    </tr>
+                    <tr>
+                        <td>OpenID Connect</td>
+                        <td>Extends OAuth 2.0 to provide authentication and obtain user information.</td>
+                        <td>Single sign-on (SSO) across multiple applications.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
